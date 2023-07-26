@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+root{
+    --navbar-height: 59px;
+}
+
+#navbar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+}
+
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{
+    color: white;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+#navbar ul li a{
+    color: white;
+    font-size: 1.5rem;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: orangered;
+    background-color: wheat;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    background: url(img/bg1.jpg) no-repeat center center/cover;
+    position: absolute;
+    height:642px;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;   
+    opacity: 0.4; 
+}
+
+.h-primary{
+    font-size: 3.8rem;
+    padding: 12px;
+    color: orangered;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+}
+
+.h{
+    color: black;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgb(75, 73, 73);
+    color: white;
+    margin: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: orangered;
+    background-color: wheat;
+}
+
+.footer{
+    text-align: center;
+    background: rgb(75, 73, 73);
+    color: white;
+    padding: 9px 20px;
+}
+
+@media (min-width: 480px) {
+    #navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    #logo {
+      margin: 10px 0; 
+    }
+    
+    #home {
+      padding: 3px 20px;
+      align-items: center;
+    }
+
+  }
+
+  @media screen and (max-width: 800px) {
+    #navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    #logo {
+      margin: 10px 0; 
+    }
+    
+    #home {
+      padding: 3px 20px;
+      align-items: center;
+    }
+  }
